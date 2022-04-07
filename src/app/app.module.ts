@@ -10,6 +10,7 @@ import { TatetiComponent } from './juegos/tateti/tateti.component';
 import { PreguntadosComponent } from './juegos/preguntados/preguntados.component';
 import { JuegosComponent } from './juegos/juegos/juegos.component';
 import { MemotestComponent } from './juegos/memotest/memotest.component';
+import { QuienSoyComponent } from './quien-soy/quien-soy.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MemotestComponent } from './juegos/memotest/memotest.component';
     TatetiComponent,
     PreguntadosComponent,
     JuegosComponent,
-    MemotestComponent
+    MemotestComponent,
+    QuienSoyComponent
   ],
   imports: [
     BrowserModule,

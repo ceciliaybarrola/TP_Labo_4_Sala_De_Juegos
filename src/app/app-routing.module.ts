@@ -7,12 +7,12 @@ import { MemotestComponent } from './juegos/memotest/memotest.component';
 import { PreguntadosComponent } from './juegos/preguntados/preguntados.component';
 import { TatetiComponent } from './juegos/tateti/tateti.component';
 import { LoginComponent } from './login/login/login.component';
+import { QuienSoyComponent } from './quien-soy/quien-soy.component';
 
 const routes: Routes = [
 {path:"login", component:LoginComponent},
 {path:"home", component:HomeComponent},
 {path:"", redirectTo:"/home", pathMatch:"full"},
-{path:"**", component:ErrorComponent},
 // {path:"juegos", component:JuegosComponent},
 // {path:"juegos/memo", component:MemotestComponent},
 // {path:"juegos/tateti", component:TatetiComponent},
@@ -22,8 +22,9 @@ children:[
   {path:"memo", component:MemotestComponent},
   {path:"tateti", component:TatetiComponent},
   {path:"preguntados", component:PreguntadosComponent}
-]}
-
+]},
+{path:"quienSoy", component:QuienSoyComponent},
+{path:"**", component:ErrorComponent}
 
 ];
 
