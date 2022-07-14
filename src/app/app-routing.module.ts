@@ -1,17 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ErrorComponent } from './error/error/error.component';
+import { BienvenidosComponent } from './home/bienvenidos/bienvenidos.component';
 import { HomeComponent } from './home/home/home.component';
+import { AhorcadoComponent } from './juegos/ahorcado/ahorcado.component';
 import { JuegosComponent } from './juegos/juegos/juegos.component';
-import { MemotestComponent } from './juegos/memotest/memotest.component';
+import { MayorMenorComponent } from './juegos/mayor-menor/mayor-menor.component';
 import { PreguntadosComponent } from './juegos/preguntados/preguntados.component';
-import { TatetiComponent } from './juegos/tateti/tateti.component';
 import { LoginComponent } from './login/login/login.component';
+import { RegistroComponent } from './login/registro/registro.component';
 import { QuienSoyComponent } from './quien-soy/quien-soy.component';
 
 const routes: Routes = [
 {path:"login", component:LoginComponent},
-{path:"home", component:HomeComponent},
+{path:"registro", component:RegistroComponent},
+// {path:"home", component:HomeComponent},
+{path:"home", component:BienvenidosComponent},
 {path:"", redirectTo:"/home", pathMatch:"full"},
 // {path:"juegos", component:JuegosComponent},
 // {path:"juegos/memo", component:MemotestComponent},
@@ -19,8 +23,8 @@ const routes: Routes = [
 // {path:"juegos/preguntados", component:PreguntadosComponent},
 {path:"juegos", component:JuegosComponent,
 children:[
-  {path:"memo", component:MemotestComponent},
-  {path:"tateti", component:TatetiComponent},
+  {path:"mayorMenor", component:MayorMenorComponent},
+  {path:"ahorcado", component:AhorcadoComponent},
   {path:"preguntados", component:PreguntadosComponent}
 ]},
 {path:"quienSoy", component:QuienSoyComponent},
